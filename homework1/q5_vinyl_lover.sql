@@ -1,7 +1,7 @@
 /* List the distinct names of releases issued in vinyl format by the British band Coldplay.
 Details: Vinyl format includes ALL vinyl dimensions excluding VinylDisc.
 Sort the release names by release date ascendingly. */
-SELECT release.name, release_info.*
+SELECT DISTINCT release.name
 FROM artist
 JOIN artist_credit_name ON artist.id = artist_credit_name.artist
 JOIN artist_credit ON artist_credit_name.artist_credit = artist_credit.id
